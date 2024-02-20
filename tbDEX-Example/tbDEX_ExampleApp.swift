@@ -8,7 +8,9 @@ import SwiftUI
 struct tbDEX_ExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                DidView()
+            }
         }
     }
 }

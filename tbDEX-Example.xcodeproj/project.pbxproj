@@ -3,22 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40B97062B603C1300484249 /* tbDEX in Frameworks */ = {isa = PBXBuildFile; productRef = A40B97052B603C1300484249 /* tbDEX */; };
 		A46F14932B5AD7C000A59A30 /* tbDEX_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F14922B5AD7C000A59A30 /* tbDEX_ExampleApp.swift */; };
-		A46F14952B5AD7C000A59A30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F14942B5AD7C000A59A30 /* ContentView.swift */; };
 		A46F14972B5AD7C100A59A30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46F14962B5AD7C100A59A30 /* Assets.xcassets */; };
 		A46F149A2B5AD7C100A59A30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46F14992B5AD7C100A59A30 /* Preview Assets.xcassets */; };
+		A46F14A42B5AD88300A59A30 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F14A32B5AD88300A59A30 /* LoadingView.swift */; };
+		A46F14A62B5ADBF500A59A30 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F14A52B5ADBF500A59A30 /* Logic.swift */; };
+		A46F14A82B5ADEF200A59A30 /* DidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F14A72B5ADEF200A59A30 /* DidView.swift */; };
+		A46F14AC2B5AE0B800A59A30 /* OfferingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F14AB2B5AE0B800A59A30 /* OfferingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A46F148F2B5AD7C000A59A30 /* tbDEX-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tbDEX-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46F14922B5AD7C000A59A30 /* tbDEX_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tbDEX_ExampleApp.swift; sourceTree = "<group>"; };
-		A46F14942B5AD7C000A59A30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A46F14962B5AD7C100A59A30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A46F14992B5AD7C100A59A30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A46F14A32B5AD88300A59A30 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A46F14A52B5ADBF500A59A30 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		A46F14A72B5ADEF200A59A30 /* DidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidView.swift; sourceTree = "<group>"; };
+		A46F14AB2B5AE0B800A59A30 /* OfferingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40B97062B603C1300484249 /* tbDEX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				A46F14922B5AD7C000A59A30 /* tbDEX_ExampleApp.swift */,
-				A46F14942B5AD7C000A59A30 /* ContentView.swift */,
+				A46F14A72B5ADEF200A59A30 /* DidView.swift */,
+				A46F14AB2B5AE0B800A59A30 /* OfferingsView.swift */,
+				A46F14A32B5AD88300A59A30 /* LoadingView.swift */,
+				A46F14A52B5ADBF500A59A30 /* Logic.swift */,
 				A46F14962B5AD7C100A59A30 /* Assets.xcassets */,
 				A46F14982B5AD7C100A59A30 /* Preview Content */,
 			);
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = "tbDEX-Example";
+			packageProductDependencies = (
+				A40B97052B603C1300484249 /* tbDEX */,
+			);
 			productName = "tbDEX-Example";
 			productReference = A46F148F2B5AD7C000A59A30 /* tbDEX-Example.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = A46F14862B5AD7C000A59A30;
+			packageReferences = (
+				A46F14A02B5AD7F400A59A30 /* XCLocalSwiftPackageReference "../tbdex-swift" */,
+			);
 			productRefGroup = A46F14902B5AD7C000A59A30 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A46F14952B5AD7C000A59A30 /* ContentView.swift in Sources */,
+				A46F14A62B5ADBF500A59A30 /* Logic.swift in Sources */,
+				A46F14A82B5ADEF200A59A30 /* DidView.swift in Sources */,
+				A46F14AC2B5AE0B800A59A30 /* OfferingsView.swift in Sources */,
+				A46F14A42B5AD88300A59A30 /* LoadingView.swift in Sources */,
 				A46F14932B5AD7C000A59A30 /* tbDEX_ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +362,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A46F14A02B5AD7F400A59A30 /* XCLocalSwiftPackageReference "../tbdex-swift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../tbdex-swift";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A40B97052B603C1300484249 /* tbDEX */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = tbDEX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A46F14872B5AD7C000A59A30 /* Project object */;
 }

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "ED63B720-1A82-48B5-A1B1-5273F776E6CE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "678E3D24-AFA9-439B-9385-885F8C77710D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tbDEX-Example/OfferingsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A7A0F02-0F94-4FC9-B2A8-9B30FB2F80F9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../tbdex-swift/Sources/tbDEX/HttpClient/HttpClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getOfferings(pfiDIDURI:filter:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4A7A0F02-0F94-4FC9-B2A8-9B30FB2F80F9 - 1738e7953694917d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static tbDEX.HttpClient.getOfferings(pfiDIDURI: Swift.String, filter: Swift.Optional&lt;tbDEX.GetOfferingFilter&gt;) async throws -&gt; Swift.Array&lt;tbDEX.Resource&lt;tbDEX.OfferingData&gt;&gt;"
+                  moduleName = "tbDEX-Example"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amika/Development/swift/tbdex-swift/Sources/tbDEX/HttpClient/HttpClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "384">
+               </Location>
+               <Location
+                  uuid = "4A7A0F02-0F94-4FC9-B2A8-9B30FB2F80F9 - 15442689deaf5126"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) await resume partial function for static tbDEX.HttpClient.getOfferings(pfiDIDURI: Swift.String, filter: Swift.Optional&lt;tbDEX.GetOfferingFilter&gt;) async throws -&gt; Swift.Array&lt;tbDEX.Resource&lt;tbDEX.OfferingData&gt;&gt;"
+                  moduleName = "tbDEX-Example"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amika/Development/swift/tbdex-swift/Sources/tbDEX/HttpClient/HttpClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "4A7A0F02-0F94-4FC9-B2A8-9B30FB2F80F9 - 24116458bfb3ed37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) suspend resume partial function for static tbDEX.HttpClient.getOfferings(pfiDIDURI: Swift.String, filter: Swift.Optional&lt;tbDEX.GetOfferingFilter&gt;) async throws -&gt; Swift.Array&lt;tbDEX.Resource&lt;tbDEX.OfferingData&gt;&gt;"
+                  moduleName = "tbDEX-Example"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amika/Development/swift/tbdex-swift/Sources/tbDEX/HttpClient/HttpClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
