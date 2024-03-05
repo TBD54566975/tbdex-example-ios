@@ -47,28 +47,43 @@ struct OfferingsListView: View {
     let did: BearerDID
     let offerings: [Offering]
 
+    @State var ongoingExchange: Bool = false
+
     var body: some View {
         List {
             ForEach(offerings, id: \.metadata.id) { offering in
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("1 \(offering.data.payinCurrency.currencyCode)")
-                        Text("→")
-                        Text("\(offering.data.payoutUnitsPerPayinUnit) \(offering.data.payoutCurrency.currencyCode)")
-                    }
-                    Text(offering.data.description)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-                .onTapGesture {
-                    Task {
-                        do {
-//                            var rfq = createRfq(offering: offering, did: did)
-//                            try await rfq.sign(did: did)
-//                            try await HttpClient.sendMessage(message: rfq)
-                        } catch {
-                            print("Error: \(error)")
+                VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("1 \(offering.data.payinCurrency.currencyCode)")
+                            Text("→")
+                            Text("\(offering.data.payoutUnitsPerPayinUnit) \(offering.data.payoutCurrency.currencyCode)")
                         }
+                        Text(offering.data.description)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+
+                    HStack {
+                        Spacer()
+                        if ongoingExchange {
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle())
+                        } else {
+                            Button("Run Example Exchange") {
+                                Task {
+                                    defer { ongoingExchange = false }
+
+                                    ongoingExchange = true
+                                    do {
+                                        try await exampleExchange(offering: offering, did: did)
+                                    } catch {
+                                        print("Error during example exchange: \(error)")
+                                    }
+                                }
+                            }
+                        }
+                        Spacer()
                     }
                 }
             }

@@ -31,7 +31,7 @@ struct DidView: View {
         .navigationTitle("DID")
         .task {
             do {
-                didState = .created(try createDid())
+                didState = .created(try createOrLoadDid())
             } catch {
                 didState = .error(error)
             }

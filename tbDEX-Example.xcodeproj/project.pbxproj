@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A40B97062B603C1300484249 /* tbDEX in Frameworks */ = {isa = PBXBuildFile; productRef = A40B97052B603C1300484249 /* tbDEX */; };
 		A46F14932B5AD7C000A59A30 /* tbDEX_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F14922B5AD7C000A59A30 /* tbDEX_ExampleApp.swift */; };
 		A46F14972B5AD7C100A59A30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46F14962B5AD7C100A59A30 /* Assets.xcassets */; };
 		A46F149A2B5AD7C100A59A30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46F14992B5AD7C100A59A30 /* Preview Assets.xcassets */; };
@@ -15,6 +14,7 @@
 		A46F14A62B5ADBF500A59A30 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F14A52B5ADBF500A59A30 /* Logic.swift */; };
 		A46F14A82B5ADEF200A59A30 /* DidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F14A72B5ADEF200A59A30 /* DidView.swift */; };
 		A46F14AC2B5AE0B800A59A30 /* OfferingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F14AB2B5AE0B800A59A30 /* OfferingsView.swift */; };
+		A4E2FCC42B97752C0098BFB5 /* tbDEX in Frameworks */ = {isa = PBXBuildFile; productRef = A4E2FCC32B97752C0098BFB5 /* tbDEX */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A40B97062B603C1300484249 /* tbDEX in Frameworks */,
+				A4E2FCC42B97752C0098BFB5 /* tbDEX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +45,7 @@
 			children = (
 				A46F14912B5AD7C000A59A30 /* tbDEX-Example */,
 				A46F14902B5AD7C000A59A30 /* Products */,
+				A4E2FCBF2B9773940098BFB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +79,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A4E2FCBF2B9773940098BFB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -95,7 +103,7 @@
 			);
 			name = "tbDEX-Example";
 			packageProductDependencies = (
-				A40B97052B603C1300484249 /* tbDEX */,
+				A4E2FCC32B97752C0098BFB5 /* tbDEX */,
 			);
 			productName = "tbDEX-Example";
 			productReference = A46F148F2B5AD7C000A59A30 /* tbDEX-Example.app */;
@@ -126,7 +134,7 @@
 			);
 			mainGroup = A46F14862B5AD7C000A59A30;
 			packageReferences = (
-				A46F14A02B5AD7F400A59A30 /* XCLocalSwiftPackageReference "../tbdex-swift" */,
+				A4E2FCC22B97752C0098BFB5 /* XCRemoteSwiftPackageReference "tbdex-swift" */,
 			);
 			productRefGroup = A46F14902B5AD7C000A59A30 /* Products */;
 			projectDirPath = "";
@@ -363,16 +371,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		A46F14A02B5AD7F400A59A30 /* XCLocalSwiftPackageReference "../tbdex-swift" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../tbdex-swift";
+/* Begin XCRemoteSwiftPackageReference section */
+		A4E2FCC22B97752C0098BFB5 /* XCRemoteSwiftPackageReference "tbdex-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TBD54566975/tbdex-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A40B97052B603C1300484249 /* tbDEX */ = {
+		A4E2FCC32B97752C0098BFB5 /* tbDEX */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = A4E2FCC22B97752C0098BFB5 /* XCRemoteSwiftPackageReference "tbdex-swift" */;
 			productName = tbDEX;
 		};
 /* End XCSwiftPackageProductDependency section */
