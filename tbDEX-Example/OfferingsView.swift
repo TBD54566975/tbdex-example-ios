@@ -55,9 +55,9 @@ struct OfferingsListView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     VStack(alignment: .leading) {
                         HStack {
-                            Text("1 \(offering.data.payinCurrency.currencyCode)")
+                            Text("1 \(offering.data.payin.currencyCode)")
                             Text("→")
-                            Text("\(offering.data.payoutUnitsPerPayinUnit) \(offering.data.payoutCurrency.currencyCode)")
+                            Text("\(offering.data.payoutUnitsPerPayinUnit) \(offering.data.payout.currencyCode)")
                         }
                         Text(offering.data.description)
                             .font(.caption)

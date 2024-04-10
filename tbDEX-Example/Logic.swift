@@ -45,26 +45,23 @@ func exampleExchange(offering: Offering, did: BearerDID) async throws {
     print("Creating RFQ...")
 
     // Create an RFQ
-    var rfq = RFQ(
+    var rfq = try RFQ(
         to: offering.metadata.from,
         from: did.uri,
         data: .init(
-            offeringId: offering.metadata.id.rawValue,
-            payinAmount: "1.00",
-            claims: [
-                claim,
-            ],
-            payinMethod: SelectedPaymentMethod(
-                kind: "USD_LEDGER",
-                paymentDetails: [:]
+            offeringId: offering.metadata.id,
+            payin: .init(
+                amount: "1.00",
+                kind: "USD_LEDGER"
             ),
-            payoutMethod: SelectedPaymentMethod(
+            payout: .init(
                 kind: "MOMO_MPESA",
                 paymentDetails: [
                     "phoneNumber": "1234567890",
                     "reason": "just cause"
                 ]
-            )
+            ),
+            claims: [claim]
         )
     )
 
@@ -76,7 +73,7 @@ func exampleExchange(offering: Offering, did: BearerDID) async throws {
     try rfq.sign(did: did)
 
     // Send the RFQ
-    try await tbDEXHttpClient.sendMessage(message: rfq)
+    try await tbDEXHttpClient.createExchange(rfq: rfq)
 
     print("Sent RFQ, waiting for Quote")
 
@@ -113,7 +110,7 @@ func exampleExchange(offering: Offering, did: BearerDID) async throws {
     try order.sign(did: did)
 
     // Send the Order
-    try await tbDEXHttpClient.sendMessage(message: order)
+    try await tbDEXHttpClient.submitOrder(order: order)
 
     print("Sent Order, waiting for Close")
 
